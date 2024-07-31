@@ -1,7 +1,7 @@
 import Container from "@/components/shared/Container";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-
+import macbook from "@/assets/images/macbook-exposed.png";
 const intro = {
   hidden: { opacity: 0 },
   visible: {
@@ -78,7 +78,7 @@ const HeroSection = () => {
           initial="initial"
           animate="animate"
         >
-          {/* <img className="h-[95%] object-contain" src={macbook} alt="" /> */}
+          <img className="h-[95%] object-contain" src={macbook} alt="" />
         </motion.div>
       </Container>
     </div>
