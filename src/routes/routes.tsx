@@ -6,7 +6,7 @@ import Dashboard from "@/pages/admin/Dashboard";
 import ServicesList from "@/pages/admin/ServicesList";
 import Home from "@/pages/home";
 
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +29,11 @@ const router = createBrowserRouter([
     path: "/admin",
     element: <AdminLayout />,
     children: [
+      // Simple hack to redirect to dashboard when accessing /admin
+      {
+        index: true,
+        element: <Navigate to="/admin/dashboard" />,
+      },
       {
         path: "dashboard",
         element: <Dashboard />,
